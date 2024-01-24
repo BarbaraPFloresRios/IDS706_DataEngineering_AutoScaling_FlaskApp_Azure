@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translation App</title>
+    <style>
+        /* Styles for the body */
+        body {
+            background-color: #f2f2f2;
+            margin-top: 50px;
+            font-family: Verdana, Arial, sans-serif; /* Changed to Verdana, Arial */
+        }
+
+        /* Styles for the heading */
+        h1 {
+            color: #333;
+            text-align: center;
+        }
+
+        /* Styles for the form */
+        form {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        /* Styles for input fields */
+        input {
+            padding: 5px;
+        }
+
+        /* Styles for the submit button */
+        button {
+            padding: 5px 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        /* Styles for paragraphs */
+        p {
+            margin-top: 10px;
+            text-align: center;
+        }
+
+        /* Styles for flag images */
+        .flag {
+            width: 30px;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Heading of the page -->
+    <h1>Translation App</h1>
+
+    <!-- Information about translation -->
+    <p>
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1280px-Flag_of_the_United_States.svg.png" alt="US Flag" class="flag">
+        <img src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9a/Flag_of_Spain.svg/1280px-Flag_of_Spain.svg.png" alt="Spain Flag" class="flag">
+        Translation from English to Spanish
+    </p>
+
+    <!-- Form for text input and translation -->
+    <form action="/translate" method="post">
+        <label for="input_text">Enter text in English:</label>
+        <input type="text" name="input_text" id="input_text" required>
+        <button type="submit">Translate</button>
+    </form>
+
+    <!-- Display input text if available -->
+    {% if input_text %}
+        <p><strong>Input Text:</strong> {{ input_text }}</p>
+    {% endif %}
+
+    <!-- Display translated text if available -->
+    {% if translated_text %}
+        <p><strong>Translated Text:</strong> {{ translated_text }}</p>
+    {% endif %}
+</body>
+</html>
