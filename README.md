@@ -6,7 +6,7 @@
 
 
 IDS706_DataEngineering_BarbaraFlores_Project4
-## 📂 Auto Scaling Flask App Using Azure App Services
+## 📂 Auto Scaling Flask App Using Azure Services
 
 ### Project Overview
 In this project, we have created a Translation App using Flask, allowing users to translate English text to Spanish seamlessly. The core functionality is powered by the Helsinki-NLP Opus MT model, showcasing the integration of advanced natural language processing capabilities into a Flask web application.
